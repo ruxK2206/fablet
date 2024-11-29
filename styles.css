@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
-  background: url('#') no-repeat center center fixed;
+  background: url('background.png') no-repeat center center fixed;
   background-size: cover; /* Ensures the image covers the whole background */
   margin: 0;
   padding: 0;
@@ -20,11 +20,13 @@ body {
   gap: 20px;
 }
 
+
 .logo {
   width: 60px; /* Adjust size as needed */
   height: auto;
   display: block;
 }
+
 
 
 .container {
@@ -35,11 +37,12 @@ body {
 
 /* Header */
 .header {
-  background-color: #5a9;
+  background-color: rgba(0, 0, 0, 0.8); /* 0.8 makes the background slightly transparent */
   color: #fff;
   text-align: center;
   padding: 20px 0;
 }
+
 
 .header h1 {
   margin: 0;
