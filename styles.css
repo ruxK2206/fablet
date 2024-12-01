@@ -82,7 +82,7 @@ body {
   display: block;
   position: relative; /* To position the pseudo-element */
   background-color: transparent; /* Set transparent background */
-  border: 10px solid #000000; /* Retain border for visibility */
+  border: 2px solid #000000; /* Retain border for visibility */
   border-radius: 8px;
   text-align: center;
   padding: 20px;
