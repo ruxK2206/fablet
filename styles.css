@@ -3,15 +3,9 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #333;
   background: url('background.png') no-repeat center center fixed;
-  background-size: cover; 
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  color: #fff; 
-  
+  background-size: cover;
+  color: #fff;
 }
 
 .header-content {
@@ -20,14 +14,11 @@ body {
   gap: 20px;
 }
 
-
 .logo {
-  width: 60px; 
+  width: 15%;
   height: auto;
   display: block;
 }
-
-
 
 .container {
   width: 90%;
@@ -35,14 +26,12 @@ body {
   margin: 0 auto;
 }
 
-
 .header {
-  background-color: rgba(0, 0, 0, 0.8); 
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   text-align: center;
   padding: 20px 0;
 }
-
 
 .header h1 {
   margin: 0;
@@ -69,7 +58,7 @@ body {
 /* Categories */
 .categories h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .category-grid {
@@ -80,45 +69,43 @@ body {
 
 .category-card {
   display: block;
-  position: relative; /* To position the pseudo-element */
-  background-color: transparent; /* Set transparent background */
-  border: 2px solid #000000; /* Retain border for visibility */
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #000000;
   border-radius: 8px;
   text-align: center;
   padding: 20px;
   text-decoration: none;
   color: #cacaca;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Ensure the pseudo-element stays within the button */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .category-card::before {
-  content: ''; /* Add an empty content for the pseudo-element */
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black layer with transparency */
-  z-index: 0; /* Place the layer below the text */
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  transition: background-color 0.3s ease;
 }
 
 .category-card:hover::before {
-  background-color: rgba(0, 0, 0, 0.8); /* Darker layer on hover */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .category-card:hover {
-  color: #fff; /* Change text color for better contrast */
+  color: #fff;
 }
 
 .category-card * {
   position: relative;
-  z-index: 1; /* Ensure content stays above the black layer */
+  z-index: 1;
 }
-
-
 
 /* Books Section */
 .book-section h2 {
@@ -147,7 +134,7 @@ body {
 }
 
 .book-card h3 {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .book-card .author {
@@ -166,3 +153,179 @@ body {
   text-align: center;
   padding: 10px 0;
 }
+
+/* Sticky Footer */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Footer Animation: Background */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, #af852b, #c70039, #900c3f, #581845);
+  animation: moveGradient 8s linear infinite;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Footer Text Content */
+.footer .footer-content {
+  position: relative;
+  z-index: 1; /* Ensure it stays above the background animation */
+}
+
+.footer h3 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.footer p {
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+/* Footer Buttons */
+.footer .btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff5733;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer .btn:hover {
+  transform: scale(1.1);
+  background-color: #c70039;
+}
+
+/* Footer Social Media and Contact Buttons */
+.footer .social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Animation Keyframes */
+@keyframes moveGradient {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Footer Animation: Background */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, #eeff00, #ffaa00, #211497, #581845);
+  animation: moveGradient 8s linear infinite;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Footer Grid Layout */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 1; /* Keep content above the animation */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+  font-size: 18px;
+  color: #ddd;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #553a8a;
+}
+
+/* Buttons */
+.footer .btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ff5733;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer .btn:hover {
+  transform: scale(1.1);
+  background-color: #ff0000;
+}
+
+/* Animation Keyframes */
+@keyframes moveGradient {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
