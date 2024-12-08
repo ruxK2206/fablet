@@ -65,7 +65,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-}
+} 
 
 .category-card {
   display: block;
@@ -154,7 +154,24 @@ body {
   padding: 10px 0;
 }
 
-/* Sticky Footer */
+.footer-blog{
+  margin-bottom: 20px;
+}
+
+footer-blog ul li{
+  margin: 5px 0;
+
+}
+
+footer-blog ul li a {
+  color: #ffc107
+
+}
+
+footer-blog ul li a:hover {
+  text-decoration: underline;
+}
+
 html, body {
   height: 100%;
   display: flex;
@@ -165,108 +182,7 @@ main {
   flex: 1;
 }
 
-/* Footer Styles */
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  overflow: hidden;
-}
 
-/* Footer Animation: Background */
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(120deg, #af852b, #c70039, #900c3f, #581845);
-  animation: moveGradient 8s linear infinite;
-  z-index: 0;
-  opacity: 0.3;
-}
-
-/* Footer Text Content */
-.footer .footer-content {
-  position: relative;
-  z-index: 1; /* Ensure it stays above the background animation */
-}
-
-.footer h3 {
-  font-size: 30px;
-  margin: 10px 0;
-}
-
-.footer p {
-  font-size: 25px;
-  margin: 5px 0;
-}
-
-/* Footer Buttons */
-.footer .btn {
-  display: inline-block;
-  margin: 10px 5px;
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #ff5733;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.footer .btn:hover {
-  transform: scale(1.1);
-  background-color: #c70039;
-}
-
-/* Footer Social Media and Contact Buttons */
-.footer .social-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-/* Animation Keyframes */
-@keyframes moveGradient {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: 0%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-/* Footer Styles */
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 40px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Footer Animation: Background */
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(120deg, #eeff00, #ffaa00, #211497, #581845);
-  animation: moveGradient 8s linear infinite;
-  z-index: 0;
-  opacity: 0.3;
-}
 
 /* Footer Grid Layout */
 .footer-content {
@@ -279,6 +195,7 @@ main {
   margin: 0 auto;
   text-align: left;
 }
+
 
 .footer h3 {
   font-size: 30px;
